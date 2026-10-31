@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">REVmeet</string>
+    <!--Meeting place string -->
+    <string name="button_addMeetingPlace">Add MeetingPlace</string>
+    <string name="hint_meetingPlaceTitle">MeetingPlace Title</string>
+    <string name="hint_meetingPlaceDescription">Description </string>
+    <string name="menu_cancelMeetingPlace">Cancel</string>
+    <string name="menu_addMeetingPlace">Add</string>
+    <string name="enter_meetingPlace_title"> Please enter a MeetingPlace Title </string>
+    <string name="save_meetingPlace"> Save MeetingPlace </string>
+    <string name="menu_deleteMeetingPlace">Delete</string>
+    <string name="menu_saveMeetingPlace">Save</string>
+    <!--User string -->
+    <string name="button_addUser">Add User</string>
+    <string name="hint_userName">User Name</string>
+    <string name="hint_userEmail">E-mail </string>
+    <string name="menu_cancelUser">Cancel</string>
+    <string name="menu_addUser">Add</string>
+    <string name="enter_user_name"> Please enter a User Name </string>
+    <string name="save_user"> Save User </string>
+    <string name="menu_deleteUser">Delete</string>
+    <string name="menu_saveUser">Save</string>
+    <!--Car string -->
+    <string name="button_addCar">Add Car</string>
+    <string name="hint_carMake">Car Make</string>
+    <string name="hint_carColor">Car Color </string>
+    <string name="hint_carName">Car Name </string>
+    <string name="menu_cancelCar">Cancel</string>
+    <string name="menu_addCar">Add</string>
+    <string name="enter_car_make"> Please enter the car make </string>
+    <string name="enter_car_color"> Please enter the car color</string>
+    <string name="enter_car_name"> Please enter the car name </string>
+    <string name="save_car"> Save User </string>
+    <string name="menu_deleteCar">Delete</string>
+    <string name="menu_saveCar">Save</string>
+
 </resources>
