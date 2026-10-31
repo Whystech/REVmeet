@@ -1,16 +1,24 @@
 <resources>
     <string name="app_name">REVmeet</string>
     <!--Meeting place string -->
-    <string name="button_addMeetingPlace">Add MeetingPlace</string>
+    <string name="button_addMeetingPlace">Add Meeting</string>
     <string name="hint_meetingPlaceTitle">MeetingPlace Title</string>
     <string name="hint_meetingPlaceDescription">Description </string>
+    <string name="hint_meetingParticipants">No. of Participants </string>
+    <string name="no_meetings">No Meetings Added yet. </string>
     <string name="menu_cancelMeetingPlace">Cancel</string>
     <string name="menu_addMeetingPlace">Add</string>
     <string name="enter_meetingPlace_title"> Please enter a MeetingPlace Title </string>
     <string name="save_meetingPlace"> Save MeetingPlace </string>
     <string name="menu_deleteMeetingPlace">Delete</string>
     <string name="menu_saveMeetingPlace">Save</string>
-    <!--User string -->
+    <!-- Labels for meeting card -->
+    <string name="label_location_type">Location type</string>
+    <string name="label_participants">Participants</string>
+    <string name="label_description">Description</string>
+    <!-- Also title for the list itself -->
+    <string name="meeting_list_title">REVmeetings</string>
+    <!--User strings -->
     <string name="button_addUser">Add User</string>
     <string name="hint_userName">User Name</string>
     <string name="hint_userEmail">E-mail </string>
@@ -20,7 +28,7 @@
     <string name="save_user"> Save User </string>
     <string name="menu_deleteUser">Delete</string>
     <string name="menu_saveUser">Save</string>
-    <!--Car string -->
+    <!--Car strings -->
     <string name="button_addCar">Add Car</string>
     <string name="hint_carMake">Car Make</string>
     <string name="hint_carColor">Car Color </string>

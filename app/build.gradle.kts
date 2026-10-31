@@ -8,6 +8,10 @@ android {
     compileSdk {
         version = release(37)
     }
+    /// enabled view binding
+    buildFeatures {
+        viewBinding = true
+    }
 
     defaultConfig {
         applicationId = "org.ianus.revmeet"
@@ -46,4 +50,5 @@ dependencies {
     implementation(libs.picasso)
     implementation(libs.play.services.maps)
     implementation(libs.gson)
+
 }

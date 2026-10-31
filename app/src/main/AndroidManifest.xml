@@ -12,6 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.REVmeet">
+
+        <!-- Set meeting list view as initial activity to be seen by the user at launch time-->
         <activity
             android:name=".views.meetinglist.MeetingListView"
             android:exported="true"
