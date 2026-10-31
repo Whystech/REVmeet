@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarAdd"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="30dp"
+        app:title="@string/button_addMeetingPlace"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/meetingTitle"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:hint="@string/hint_meetingPlaceTitle"
+                android:inputType="textCapSentences" />
+
+            <EditText
+                android:id="@+id/meetingDescription"
+                android:layout_width="match_parent"
+                android:layout_height="177dp"
+                android:layout_marginTop="12dp"
+                android:gravity="top"
+                android:hint="@string/hint_meetingPlaceDescription"
+                android:inputType="textCapSentences|textMultiLine"
+                android:minLines="3" />
+
+            <EditText
+                android:id="@+id/typeOfLocation"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:layout_marginTop="12dp"
+                android:hint="@string/hint_meetingTypeOfLocation"
+                android:inputType="textCapSentences" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/numberOfParticipants"
+                android:layout_width="162dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                android:hint="@string/hint_meetingParticipants"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/maxNumberOfParticipants"
+                android:layout_width="198dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                android:hint="@string/hint_meetingMaxParticipants"
+                android:inputType="number" />
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

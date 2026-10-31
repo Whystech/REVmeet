@@ -5,6 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import org.ianus.revmeet.databinding.ActivityMeetingListBinding
+import android.content.Intent
+import android.view.Menu
+import android.view.MenuItem
+import org.ianus.revmeet.R
+import org.ianus.revmeet.views.meeting.MeetingView
 
 class MeetingListView : AppCompatActivity() {
 
@@ -32,5 +37,20 @@ class MeetingListView : AppCompatActivity() {
         val hasMeetings = meetings.isNotEmpty()
         binding.recyclerView.isVisible = hasMeetings
         binding.emptyState.isVisible = !hasMeetings
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_meeting_list, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.item_add_meeting -> {
+                startActivity(Intent(this, MeetingView::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

@@ -5,24 +5,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!-- Edited margins so it does not interfere with status bar and navigation bar at the bottom -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="66dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         app:title="@string/app_name" />
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:layout_marginBottom="40dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
-            android:layout_marginBottom="20dp"
             android:padding="10dp" />
 
         <TextView

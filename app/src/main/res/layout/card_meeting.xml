@@ -8,9 +8,10 @@
 
     app:cardUseCompatPadding="true">
 
+    <!-- Added labels for better visibility -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="392dp"
+        android:layout_height="375dp"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -63,7 +64,7 @@
         <TextView
             android:id="@+id/participantCount"
             android:layout_width="111dp"
-            android:layout_height="56dp"
+            android:layout_height="43dp"
             android:layout_marginTop="4dp" />
 
     </LinearLayout>

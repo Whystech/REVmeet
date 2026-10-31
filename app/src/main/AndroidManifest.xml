@@ -23,6 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<!-- Meeting view activity -->
+        <activity
+            android:name=".views.meeting.MeetingView"
+            android:exported="false" />
+
+
     </application>
 
 </manifest>

@@ -2,22 +2,31 @@
     <string name="app_name">REVmeet</string>
     <!--Meeting place string -->
     <string name="button_addMeetingPlace">Add Meeting</string>
-    <string name="hint_meetingPlaceTitle">MeetingPlace Title</string>
-    <string name="hint_meetingPlaceDescription">Description </string>
-    <string name="hint_meetingParticipants">No. of Participants </string>
     <string name="no_meetings">No Meetings Added yet. </string>
     <string name="menu_cancelMeetingPlace">Cancel</string>
     <string name="menu_addMeetingPlace">Add</string>
-    <string name="enter_meetingPlace_title"> Please enter a MeetingPlace Title </string>
-    <string name="save_meetingPlace"> Save MeetingPlace </string>
+    <string name="enter_meetingPlace_title"> Please enter a Meeting Title </string>
+    <string name="save_meetingPlace"> Save Meeting</string>
     <string name="menu_deleteMeetingPlace">Delete</string>
     <string name="menu_saveMeetingPlace">Save</string>
     <!-- Labels for meeting card -->
     <string name="label_location_type">Location type</string>
     <string name="label_participants">Participants</string>
     <string name="label_description">Description</string>
+    <!-- Hints for adding new car meets -->
+    <string name="hint_meetingPlaceTitle">MeetingTitle</string>
+    <string name="hint_meetingPlaceDescription">Description </string>
+    <string name="hint_meetingParticipants">No. of participants </string>
+    <string name="hint_meetingMaxParticipants">Max No. of participants.</string>
+    <string name="hint_meetingTypeOfLocation">Type of location (eg. "Parking Lot")</string>
+    <!-- Autopopulates the field -->
+    <string name="default_participants">1</string>
+    <string name="default_maxParticipants">8</string>
+    <!-- Participants error -->
+    <string name="error_participant_counts">Invalid participants count</string>
     <!-- Also title for the list itself -->
     <string name="meeting_list_title">REVmeetings</string>
+
     <!--User strings -->
     <string name="button_addUser">Add User</string>
     <string name="hint_userName">User Name</string>
@@ -41,5 +50,6 @@
     <string name="save_car"> Save User </string>
     <string name="menu_deleteCar">Delete</string>
     <string name="menu_saveCar">Save</string>
+
 
 </resources>
