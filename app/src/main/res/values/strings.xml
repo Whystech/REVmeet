@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">REVmeet</string>
     <!--Meeting place list strings -->
-    <string name="button_addMeetingPlace">Add Meeting</string>
+    <string name="button_addMeetingPlace">Add carmeet</string>
     <string name="no_meetings">No Meetings Added yet. </string>
     <string name="menu_cancelMeetingPlace">Cancel</string>
     <string name="menu_addMeetingPlace">Add</string>
-    <string name="enter_meetingPlace_title"> Please enter a Meeting Title </string>
-    <string name="save_meetingPlace"> Save Meeting</string>
+    <string name="enter_meetingPlace_title"> Please enter a car meet Title </string>
+    <string name="save_meetingPlace"> Save CarMeet</string>
     <string name="menu_deleteMeetingPlace">Delete</string>
     <string name="menu_saveMeetingPlace">Save</string>
     <!-- Labels for meeting card -->
@@ -14,11 +14,11 @@
     <string name="label_participants">Participants</string>
     <string name="label_description">Description</string>
     <!-- Hints for adding new car meets -->
-    <string name="hint_meetingPlaceTitle">MeetingTitle</string>
+    <string name="hint_meetingPlaceTitle">Car Meeting title</string>
     <string name="hint_meetingPlaceDescription">Description </string>
     <string name="hint_meetingParticipants">No. of participants </string>
     <string name="hint_meetingMaxParticipants">Max No. of participants.</string>
-    <string name="hint_meetingTypeOfLocation">Type of location (eg. "Parking Lot")</string>
+    <string name="hint_meetingTypeOfLocation">Type of meeting location (e.g. "Parking Lot")</string>
     <!-- Autopopulates the field -->
     <string name="default_participants">1</string>
     <string name="default_maxParticipants">8</string>
@@ -29,10 +29,10 @@
 
     <!-- Meeting detailed view strings -->
 
-    <string name="meeting_detail_title">Meeting details</string>
+    <string name="meeting_detail_title">Car meeting details</string>
     <string name="meeting_not_found">Meeting could not be found</string>
     <string name="menu_editMeeting">Edit</string>
-    <string name="edit_meeting_title">Edit meeting</string>
+    <string name="edit_meeting_title">Edit carmeet</string>
 
     <!--User strings -->
     <string name="button_addUser">Add User</string>

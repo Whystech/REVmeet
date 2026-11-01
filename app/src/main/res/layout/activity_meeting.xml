@@ -47,28 +47,50 @@
                 android:layout_marginTop="12dp"
                 android:hint="@string/hint_meetingTypeOfLocation"
                 android:inputType="textCapSentences" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
 
-            <EditText
-                android:id="@+id/numberOfParticipants"
-                android:layout_width="162dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="12dp"
-                android:hint="@string/hint_meetingParticipants"
-                android:inputType="number" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/maxNumberOfParticipants"
-                android:layout_width="198dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="12dp"
-                android:hint="@string/hint_meetingMaxParticipants"
-                android:inputType="number" />
-        </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Participants"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Max Participants"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <NumberPicker
+                    android:id="@+id/numberOfParticipants"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+
+                    android:hint="@string/hint_meetingParticipants" />
+
+                <NumberPicker
+                    android:id="@+id/maxNumberOfParticipants"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="@string/hint_meetingMaxParticipants" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

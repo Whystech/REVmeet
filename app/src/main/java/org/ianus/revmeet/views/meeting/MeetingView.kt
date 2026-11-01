@@ -21,6 +21,17 @@ class MeetingView : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbarAdd)
         presenter = MeetingPresenter(this)
+
+        /// Set values for NumberPicker
+        binding.numberOfParticipants.minValue = 1
+        binding.numberOfParticipants.maxValue = 100
+        binding.numberOfParticipants.value = 1
+        binding.numberOfParticipants.wrapSelectorWheel = false
+
+        binding.maxNumberOfParticipants.minValue = 1
+        binding.maxNumberOfParticipants.maxValue = 100
+        binding.maxNumberOfParticipants.value = 8
+        binding.maxNumberOfParticipants.wrapSelectorWheel = false
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -47,9 +58,9 @@ class MeetingView : AppCompatActivity() {
         val description = binding.meetingDescription.text.toString().trim()
         val locationType = binding.typeOfLocation.text.toString().trim()
         val participants =
-            binding.numberOfParticipants.text.toString().toIntOrNull()
+            binding.numberOfParticipants.value
         val maximum =
-            binding.maxNumberOfParticipants.text.toString().toIntOrNull()
+            binding.maxNumberOfParticipants.value
 
         if (title.isBlank()) {
             Snackbar.make(
