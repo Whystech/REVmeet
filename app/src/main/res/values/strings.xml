@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">REVmeet</string>
-    <!--Meeting place string -->
+    <!--Meeting place list strings -->
     <string name="button_addMeetingPlace">Add Meeting</string>
     <string name="no_meetings">No Meetings Added yet. </string>
     <string name="menu_cancelMeetingPlace">Cancel</string>
@@ -27,6 +27,13 @@
     <!-- Also title for the list itself -->
     <string name="meeting_list_title">REVmeetings</string>
 
+    <!-- Meeting detailed view strings -->
+
+    <string name="meeting_detail_title">Meeting details</string>
+    <string name="meeting_not_found">Meeting could not be found</string>
+    <string name="menu_editMeeting">Edit</string>
+    <string name="edit_meeting_title">Edit meeting</string>
+
     <!--User strings -->
     <string name="button_addUser">Add User</string>
     <string name="hint_userName">User Name</string>
@@ -50,6 +57,7 @@
     <string name="save_car"> Save User </string>
     <string name="menu_deleteCar">Delete</string>
     <string name="menu_saveCar">Save</string>
+    <string name="list_user">List users</string>
 
 
 </resources>

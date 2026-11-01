@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class carModel(var id: Long = 0,
+data class CarModel(var id: Long = 0,
                     var make: String = "",
                     var color: String = "",
                     var name: String = "" ) : Parcelable

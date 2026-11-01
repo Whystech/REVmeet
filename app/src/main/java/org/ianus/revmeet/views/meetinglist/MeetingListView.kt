@@ -10,8 +10,9 @@ import android.view.Menu
 import android.view.MenuItem
 import org.ianus.revmeet.R
 import org.ianus.revmeet.views.meeting.MeetingView
+import org.ianus.revmeet.models.MeetingModel
 
-class MeetingListView : AppCompatActivity() {
+class MeetingListView : AppCompatActivity(), MeetingListener {
 
     private lateinit var binding: ActivityMeetingListBinding
     private lateinit var presenter: MeetingListPresenter
@@ -32,7 +33,7 @@ class MeetingListView : AppCompatActivity() {
         super.onResume()
 
         val meetings = presenter.getMeetings()
-        binding.recyclerView.adapter = MeetingAdapter(meetings)
+        binding.recyclerView.adapter = MeetingAdapter(meetings, this)
 
         val hasMeetings = meetings.isNotEmpty()
         binding.recyclerView.isVisible = hasMeetings
@@ -52,5 +53,10 @@ class MeetingListView : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    // ADDED: Receive card taps and ask the presenter to open that meeting's details.
+    override fun onMeetingClick(meeting: MeetingModel) {
+        presenter.doShowMeeting(meeting)
     }
 }

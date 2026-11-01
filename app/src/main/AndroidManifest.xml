@@ -28,6 +28,11 @@
             android:name=".views.meeting.MeetingView"
             android:exported="false" />
 
+        <!-- Meeting details activity-->
+        <activity
+            android:name=".views.meeting.MeetingDetailView"
+            android:exported="false" />
+
 
     </application>
 
