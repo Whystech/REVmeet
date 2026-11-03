@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">REVmeet</string>
-    <!--Meeting place list strings -->
+
+    <!--Car meeting strings -->
+
     <string name="button_addMeetingPlace">Add carmeet</string>
     <string name="no_meetings">No Meetings Added yet. </string>
     <string name="menu_cancelMeetingPlace">Cancel</string>
@@ -18,14 +20,30 @@
     <string name="hint_meetingPlaceDescription">Description </string>
     <string name="hint_meetingParticipants">No. of participants </string>
     <string name="hint_meetingMaxParticipants">Max No. of participants.</string>
-    <string name="hint_meetingTypeOfLocation">Type of meeting location (e.g. "Parking Lot")</string>
-    <!-- Autopopulates the field -->
-    <string name="default_participants">1</string>
-    <string name="default_maxParticipants">8</string>
     <!-- Participants error -->
     <string name="error_participant_counts">Invalid participants count</string>
     <!-- Also title for the list itself -->
     <string name="meeting_list_title">REVmeetings</string>
+
+    <!-- Type of location Spinner list it is ok to have them hardcoded as they are not addable by regular users-->
+
+    <string-array name="typeOfLocation">
+        <item>Parking lot</item>
+        <item>Cafe</item>
+        <item>Viewpoint</item>
+        <item>Garage</item>
+        <item>Track</item>
+        <item>Street</item>
+        <item>Cul-de-sac</item>
+        <item>Off-road</item>
+        <item>Mechanic</item>
+        <item>House</item>
+        <item>Mountain path</item>
+        <item>Coastline</item>
+        <item>Beach</item>
+        <item>Field</item>
+        <item>Other</item>
+    </string-array>
 
     <!-- Meeting detailed view strings -->
 

@@ -22,7 +22,7 @@ class MeetingView : AppCompatActivity() {
         setSupportActionBar(binding.toolbarAdd)
         presenter = MeetingPresenter(this)
 
-        /// Set values for NumberPicker
+        /// Set values for participants to be used in Number Picker
         binding.numberOfParticipants.minValue = 1
         binding.numberOfParticipants.maxValue = 100
         binding.numberOfParticipants.value = 1
@@ -56,7 +56,7 @@ class MeetingView : AppCompatActivity() {
     private fun saveMeeting() {
         val title = binding.meetingTitle.text.toString().trim()
         val description = binding.meetingDescription.text.toString().trim()
-        val locationType = binding.typeOfLocation.text.toString().trim()
+        val locationType = binding.typeOfLocation.selectedItem.toString()
         val participants =
             binding.numberOfParticipants.value
         val maximum =
