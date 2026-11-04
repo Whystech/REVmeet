@@ -11,6 +11,7 @@ import android.view.MenuItem
 import org.ianus.revmeet.R
 import org.ianus.revmeet.views.meeting.MeetingView
 import org.ianus.revmeet.models.MeetingModel
+import org.ianus.revmeet.views.userlist.UserListView
 
 class MeetingListView : AppCompatActivity(), MeetingListener {
 
@@ -49,6 +50,11 @@ class MeetingListView : AppCompatActivity(), MeetingListener {
         return when (item.itemId) {
             R.id.item_add_meeting -> {
                 startActivity(Intent(this, MeetingView::class.java))
+                true
+            }
+            /// Added menu option to view user list
+            R.id.item_list_user -> {
+                startActivity(Intent(this, UserListView::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)

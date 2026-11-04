@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--  Save the entered user. -->
+    <item
+        android:id="@+id/item_save_user"
+        android:title="@string/menu_saveUser"
+        app:showAsAction="always" />
+
+    <!--  Close the form without saving. -->
+    <item
+        android:id="@+id/item_cancel_user"
+        android:title="@string/menu_cancelUser"
+        app:showAsAction="always" />
+</menu>

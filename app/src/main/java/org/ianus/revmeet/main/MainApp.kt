@@ -7,6 +7,7 @@ import org.ianus.revmeet.models.MeetingStore
 import org.ianus.revmeet.models.MeetingMemStore
 import org.ianus.revmeet.models.MeetingModel
 import org.ianus.revmeet.models.UserMemStore
+import org.ianus.revmeet.models.UserModel
 import org.ianus.revmeet.models.UserStore
 import timber.log.Timber.i
 import timber.log.Timber
@@ -53,6 +54,27 @@ class MainApp : Application() {
                     maxNumberOfParticipants = 8
                 )
             )
+        }
+        users = UserMemStore().apply {
+            create(
+                UserModel(
+                    username = "Racerone",
+                    email = "racer@one.com"
+                )
+            )
+            create(
+                UserModel(
+                    username = "Racertwo",
+                    email = "racer@two.com"
+                )
+            )
+            create(
+                UserModel(
+                    username = "Racerthree",
+                    email = "racer@three.com"
+                )
+            )
+
         }
     }
 }
