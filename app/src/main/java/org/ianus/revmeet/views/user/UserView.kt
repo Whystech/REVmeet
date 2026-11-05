@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import org.ianus.revmeet.R
 import org.ianus.revmeet.databinding.ActivityUserBinding
+import org.ianus.revmeet.helper.ValidateEmail
 
 class UserView : AppCompatActivity() {
 
@@ -48,6 +49,8 @@ class UserView : AppCompatActivity() {
     private fun saveUser() {
         val username = binding.userName.text.toString().trim()
         val email = binding.userEmail.text.toString().trim()
+        val displayName = binding.userDisplayName.text.toString().trim()
+        val bio = binding.userBio.text.toString().trim()
 
         if (username.isBlank()) {
             Snackbar.make(
@@ -58,6 +61,26 @@ class UserView : AppCompatActivity() {
             return
         }
 
-        presenter.doAddUser(username, email)
+        if (displayName.isBlank()) {
+            Snackbar.make(
+                binding.root,
+                R.string.enter_user_name,
+                Snackbar.LENGTH_LONG
+            ).show()
+            return
+        }
+
+        //E-mail validation
+        if (!ValidateEmail.emailCheck(email)){
+            Snackbar.make(
+                binding.root,
+                R.string.enter_valid_email,
+                Snackbar.LENGTH_LONG
+            ).show()
+            return
+        }
+
+
+        presenter.doAddUser(username, email, displayName, bio)
     }
 }

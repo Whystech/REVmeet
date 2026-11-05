@@ -34,6 +34,8 @@ class UserMemStore : UserStore {
         if (foundUser != null) {
             foundUser.username = user.username
             foundUser.email = user.email
+            foundUser.displayName = user.displayName
+            foundUser.bio = user.bio
             logAll()
         }
     }

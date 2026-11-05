@@ -74,16 +74,16 @@
             <TextView
                 android:id="@+id/label_meetingDate"
                 android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:layout_marginTop="4dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="@string/label_meetingTime"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/startsAt"
-                android:layout_width="111dp"
-                android:layout_height="43dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="4dp" />
 
         </LinearLayout>

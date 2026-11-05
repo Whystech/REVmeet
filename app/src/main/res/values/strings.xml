@@ -40,12 +40,15 @@
     <!-- User form screen -->
     <string name="userName">User Name</string>
     <string name="userEmail">E-mail</string>
+    <string name="userBio">Bio</string>
+    <string name="userDisplayName">Display Name</string>
     <string name="menu_cancelUser">Cancel</string>
     <string name="menu_addUser">Add</string>
     <string name="enter_user_name">Please enter a user name</string>
     <string name="save_user">Save User</string>
     <string name="menu_deleteUser">Delete</string>
     <string name="menu_saveUser">Save</string>
+    <string name="enter_valid_email">Please enter a valid email address</string>
 
     <!-- Car-related strings (kept for future screens) -->
     <string name="button_addCar">Add Car</string>
@@ -60,6 +63,8 @@
     <string name="save_car">Save Car</string>
     <string name="menu_deleteCar">Delete</string>
     <string name="menu_saveCar">Save</string>
+
+
 
     <!-- Location types -->
     <string-array name="typeOfLocation">

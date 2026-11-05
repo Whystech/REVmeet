@@ -31,7 +31,7 @@ class MainApp : Application() {
                 MeetingModel(
                     title = "Saturday drive",
                     description = "Strolling along the coast for a few hours.",
-                    typeOfLocation = "Starting point",
+                    typeOfLocation = "Cafe",
                     numberOfParticipants = 3,
                     maxNumberOfParticipants = 8
                 )
@@ -49,7 +49,7 @@ class MainApp : Application() {
                 MeetingModel(
                     title = "Monday drive",
                     description = "Strolling along the coast for a few hours.",
-                    typeOfLocation = "Starting point",
+                    typeOfLocation = "Garage",
                     numberOfParticipants = 3,
                     maxNumberOfParticipants = 8
                 )

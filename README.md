@@ -19,3 +19,4 @@ An Android app for organizing car meets.
 - [Data Binding](https://developer.android.com/topic/libraries/data-binding)
 - [Create a Linear Layout](https://developer.android.com/develop/ui/views/layout/linear)
 - [Date and Time Picker](https://developer.android.com/develop/ui/views/components/pickers)
+- [Calendar Helper](https://stackoverflow.com/questions/7953725/how-to-convert-milliseconds-to-date-format-in-android)

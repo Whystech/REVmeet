@@ -1,8 +1,30 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<resources>
     <style name="Base.Theme.REVmeet" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#45206B</item>
+        <item name="colorOnPrimary">#494949</item>
+        <item name="colorPrimaryContainer">#7F748A</item>
+        <item name="colorOnPrimaryContainer">#241039</item>
+
+        <item name="colorSecondary">#264A78</item>
+        <item name="colorOnSecondary">#DC52E2</item>
+        <item name="colorSecondaryContainer">#123F8A</item>
+        <item name="colorOnSecondaryContainer">#101F35</item>
+
+        <item name="colorTertiary">#836E7A</item>
+        <item name="colorOnTertiary">#DB2D2D</item>
+        <item name="colorTertiaryContainer">#6D525F</item>
+        <item name="colorOnTertiaryContainer">#3B0A27</item>
+
+        <item name="colorSurface">#FBEEFB</item>
+        <item name="colorOnSurface">#1D1A22</item>
+        <item name="colorSurfaceVariant">#2C2A2F</item>
+        <item name="colorOnSurfaceVariant">#494451</item>
+        <item name="colorOutline">#79717F</item>
+
+        <item name="android:statusBarColor">#301747</item>
+        <item name="android:navigationBarColor">#FFFBFF</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">true</item>
     </style>
 
     <style name="Theme.REVmeet" parent="Base.Theme.REVmeet" />

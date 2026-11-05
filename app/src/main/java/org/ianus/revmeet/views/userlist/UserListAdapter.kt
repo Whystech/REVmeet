@@ -32,6 +32,7 @@ class UserAdapter(
         fun bind(user: UserModel) {
             binding.userName.text = user.username
             binding.userEmail.text = user.email
+            binding.userDisplayName.text = user.displayName
         }
     }
 }

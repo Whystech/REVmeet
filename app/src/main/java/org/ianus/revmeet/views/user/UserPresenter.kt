@@ -9,11 +9,13 @@ class UserPresenter(private val view: UserView) {
     private val app = view.application as MainApp
 
     // Create the user in the app's in-memory store and close the form.
-    fun doAddUser(username: String, email: String) {
+    fun doAddUser(username: String, email: String, displayName: String, bio: String) {
         app.users.create(
             UserModel(
                 username = username,
-                email = email
+                email = email,
+                displayName = displayName,
+                bio = bio
             )
         )
 

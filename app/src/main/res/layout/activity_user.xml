@@ -32,6 +32,14 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/userName"
                 android:inputType="textPersonName|textCapWords" />
+            <!-- Display Name -->
+            <EditText
+                android:id="@+id/userDisplayName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/userDisplayName"
+                android:inputType="text" />
 
             <!--  Email input. -->
             <EditText
@@ -41,6 +49,18 @@
                 android:layout_marginTop="12dp"
                 android:hint="@string/userEmail"
                 android:inputType="textEmailAddress" />
+
+            <!-- Bio -->
+            <EditText
+                android:id="@+id/userBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/userBio"
+                android:inputType="textCapSentences|textMultiLine"
+                android:minLines="3"/>
+
+
 
         </LinearLayout>
     </ScrollView>
