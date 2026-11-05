@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import org.ianus.revmeet.databinding.CardMeetingBinding
 import org.ianus.revmeet.models.MeetingModel
+import org.ianus.revmeet.helper.CalendarConverter
 
 interface MeetingListener {
    ///Opening the meeting view
@@ -41,6 +42,8 @@ class MeetingAdapter(
             binding.meetingTypeOfLocation.text = meeting.typeOfLocation
             binding.participantCount.text =
                 "${meeting.numberOfParticipants} / ${meeting.maxNumberOfParticipants} participants"
+            binding.startsAt.text = CalendarConverter.getDate(meeting.startsAt, "dd/MM/yyyy hh:mm")
+
 
             binding.root.setOnClickListener {
                 listener.onMeetingClick(meeting)

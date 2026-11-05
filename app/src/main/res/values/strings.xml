@@ -21,14 +21,15 @@
     <string name="save_meetingPlace">Save carmeet</string>
     <string name="error_participant_counts">Invalid participants count</string>
 
-    <!-- Meeting detail screen -->
+    <!-- Meeting details/labels -->
     <string name="meeting_detail_title">Car meeting details</string>
     <string name="meeting_not_found">Meeting could not be found</string>
     <string name="menu_editMeeting">Edit</string>
-    <string name="edit_meeting_title">Edit carmeet</string>
+    <string name="edit_meeting_title">Edit Carmeet</string>
     <string name="label_location_type">Location type</string>
     <string name="label_participants">Participants</string>
     <string name="label_description">Description</string>
+    <string name="label_meetingTime">Meeting time</string>
 
     <!-- User list screen -->
     <string name="button_addUser">Add User</string>

@@ -11,7 +11,7 @@
     <!-- Added labels for better visibility -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="375dp"
+        android:layout_height="461dp"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -63,6 +63,21 @@
 
         <TextView
             android:id="@+id/participantCount"
+            android:layout_width="111dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/label_meetingDate"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/label_meetingTime"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/startsAt"
             android:layout_width="111dp"
             android:layout_height="43dp"
             android:layout_marginTop="4dp" />

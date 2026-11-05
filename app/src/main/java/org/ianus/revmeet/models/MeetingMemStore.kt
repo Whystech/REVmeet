@@ -39,6 +39,8 @@ class MeetingMemStore : MeetingStore {
             foundMeeting.maxNumberOfParticipants = meeting.maxNumberOfParticipants
             foundMeeting.typeOfLocation = meeting.typeOfLocation
             foundMeeting.numberOfParticipants = meeting.numberOfParticipants
+            foundMeeting.numberOfParticipants = meeting.numberOfParticipants
+            foundMeeting.startsAt = meeting.startsAt
             logAll()
         }
     }

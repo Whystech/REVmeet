@@ -10,8 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="30dp"
-        app:title="@string/button_addMeetingPlace"
-        />
+        app:title="@string/button_addMeetingPlace" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -33,20 +32,47 @@
             <EditText
                 android:id="@+id/meetingDescription"
                 android:layout_width="match_parent"
-                android:layout_height="177dp"
+                android:layout_height="152dp"
                 android:layout_marginTop="12dp"
                 android:gravity="top"
                 android:hint="@string/hint_meetingPlaceDescription"
                 android:inputType="textCapSentences|textMultiLine"
                 android:minLines="3" />
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="Type of Location" />
+
             <Spinner
                 android:id="@+id/typeOfLocation"
                 android:layout_width="match_parent"
-                android:layout_height="108dp"
-                android:layout_marginTop="12dp"
-                android:entries="@array/typeOfLocation"/>
+                android:layout_height="55dp"
+                android:entries="@array/typeOfLocation" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                android:layout_marginTop="10dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
@@ -56,16 +82,15 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Participants"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:text="Participants" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Max Participants"
-                    android:gravity="center"/>
-
+                    android:gravity="center"
+                    android:text="Max Participants" />
             </LinearLayout>
 
             <LinearLayout
@@ -73,23 +98,46 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
+
                 <NumberPicker
                     android:id="@+id/numberOfParticipants"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:gravity="center"
-
                     android:hint="@string/hint_meetingParticipants" />
 
                 <NumberPicker
                     android:id="@+id/maxNumberOfParticipants"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:hint="@string/hint_meetingMaxParticipants" />
             </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Pick Date and Time" />
+
+            <DatePicker
+                android:id="@+id/meetingDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:layout_marginTop="12dp"
+                android:gravity="center" />
+
+            <TimePicker
+                android:id="@+id/meetingTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

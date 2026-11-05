@@ -18,3 +18,4 @@ An Android app for organizing car meets.
 - [General Android layout rules](https://developer.android.com/design/ui/mobile/guides/layout-and-content/layout-basics)
 - [Data Binding](https://developer.android.com/topic/libraries/data-binding)
 - [Create a Linear Layout](https://developer.android.com/develop/ui/views/layout/linear)
+- [Date and Time Picker](https://developer.android.com/develop/ui/views/components/pickers)

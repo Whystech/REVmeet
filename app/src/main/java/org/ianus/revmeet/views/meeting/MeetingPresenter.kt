@@ -13,14 +13,16 @@ class MeetingPresenter(private val view: MeetingView) {
         description: String,
         locationType: String,
         participants: Int,
-        maximum: Int
+        maximum: Int,
+        startsAt: Long
     ) {
         val meeting = MeetingModel(
             title = title,
             description = description,
             typeOfLocation = locationType,
             numberOfParticipants = participants,
-            maxNumberOfParticipants = maximum
+            maxNumberOfParticipants = maximum,
+            startsAt = startsAt
         )
 
         app.meetings.create(meeting)

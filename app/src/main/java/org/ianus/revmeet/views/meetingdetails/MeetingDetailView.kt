@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import org.ianus.revmeet.databinding.ActivityMeetingDetailBinding
+import org.ianus.revmeet.helper.CalendarConverter
 import org.ianus.revmeet.models.MeetingModel
 
 class MeetingDetailView : AppCompatActivity() {
@@ -42,6 +43,7 @@ class MeetingDetailView : AppCompatActivity() {
         binding.detailLocationType.text = meeting.typeOfLocation
         binding.detailParticipantCount.text =
             "${meeting.numberOfParticipants} / ${meeting.maxNumberOfParticipants}"
+        binding.startsAt.text = CalendarConverter.getDate(meeting.startsAt, "dd/MM/yyyy hh:mm")
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
