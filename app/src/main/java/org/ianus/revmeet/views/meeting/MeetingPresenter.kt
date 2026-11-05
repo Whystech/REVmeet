@@ -7,8 +7,17 @@ import org.ianus.revmeet.models.MeetingModel
 class MeetingPresenter(private val view: MeetingView) {
 
     private val app = view.application as MainApp
+    private val meetingToEdit: MeetingModel? =
+        view.intent.getParcelableExtra("meeting_edit")
 
-    fun doAddMeeting(
+    val isEditing: Boolean
+        get() = meetingToEdit != null
+
+    init {
+        meetingToEdit?.let(view::showMeeting)
+    }
+
+    fun doSaveMeeting(
         title: String,
         description: String,
         locationType: String,
@@ -16,17 +25,37 @@ class MeetingPresenter(private val view: MeetingView) {
         maximum: Int,
         startsAt: Long
     ) {
-        val meeting = MeetingModel(
-            title = title,
-            description = description,
-            typeOfLocation = locationType,
-            numberOfParticipants = participants,
-            maxNumberOfParticipants = maximum,
-            startsAt = startsAt
-        )
+        val existingMeeting = meetingToEdit
 
-        app.meetings.create(meeting)
+        if (existingMeeting == null) {
+            app.meetings.create(
+                MeetingModel(
+                    title = title,
+                    description = description,
+                    typeOfLocation = locationType,
+                    numberOfParticipants = participants,
+                    maxNumberOfParticipants = maximum,
+                    startsAt = startsAt
+                )
+            )
+        } else {
+            existingMeeting.title = title
+            existingMeeting.description = description
+            existingMeeting.typeOfLocation = locationType
+            existingMeeting.numberOfParticipants = participants
+            existingMeeting.maxNumberOfParticipants = maximum
+            existingMeeting.startsAt = startsAt
+            app.meetings.update(existingMeeting)
+        }
+
         view.setResult(Activity.RESULT_OK)
         view.finish()
     }
+
+    fun doDeleteMeeting() {
+    val meeting = meetingToEdit ?: return
+    app.meetings.delete(meeting)
+    view.setResult(Activity.RESULT_OK)
+    view.finish()
+}
 }

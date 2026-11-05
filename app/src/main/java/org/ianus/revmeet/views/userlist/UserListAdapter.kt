@@ -1,4 +1,4 @@
-package org.ianus.revmeet.views.userList
+package org.ianus.revmeet.views.userlist
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +6,15 @@ import androidx.recyclerview.widget.RecyclerView
 import org.ianus.revmeet.databinding.CardUserBinding
 import org.ianus.revmeet.models.UserModel
 
+
+interface UserListener {
+    ///Opening the user view
+    fun onUserClick(user: UserModel)
+    fun onEditUserClick(user: UserModel)
+}
 class UserAdapter(
-    private val users: List<UserModel>
+    private val users: List<UserModel>,
+    private val listener: UserListener
 ) : RecyclerView.Adapter<UserAdapter.UserHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserHolder {
@@ -20,7 +27,7 @@ class UserAdapter(
     }
 
     override fun onBindViewHolder(holder: UserHolder, position: Int) {
-        holder.bind(users[position])
+        holder.bind(users[position], listener)
     }
 
     override fun getItemCount(): Int = users.size
@@ -29,10 +36,16 @@ class UserAdapter(
         private val binding: CardUserBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(user: UserModel) {
+        fun bind(user: UserModel, listener: UserListener) {
             binding.userName.text = user.username
             binding.userEmail.text = user.email
             binding.userDisplayName.text = user.displayName
-        }
-    }
-}
+            binding.root.setOnClickListener {
+                listener.onUserClick(user)
+            }
+            binding.editUserButton.setOnClickListener { 
+            listener.onEditUserClick(user)
+            }
+            }
+        }}
+    

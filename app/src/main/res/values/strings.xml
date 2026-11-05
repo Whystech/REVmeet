@@ -3,7 +3,7 @@
     <string name="app_name">REVmeet</string>
     <string name="meeting_list_title">REVmeetings</string>
 
-    <!-- Meeting list screen -->
+    <!-- Meeting list view -->
     <string name="button_addMeetingPlace">Add carmeet</string>
     <string name="menu_addMeetingPlace">Add</string>
     <string name="menu_deleteMeetingPlace">Delete</string>
@@ -12,7 +12,7 @@
     <string name="list_user">List users</string>
     <string name="no_meetings">No meetings added yet.</string>
 
-    <!-- Meeting form screen -->
+    <!-- Meeting form view -->
     <string name="hint_meetingPlaceTitle">Car meeting title</string>
     <string name="hint_meetingPlaceDescription">Description</string>
     <string name="hint_meetingParticipants">No. of participants</string>
@@ -20,6 +20,8 @@
     <string name="enter_meetingPlace_title">Please enter a car meet title</string>
     <string name="save_meetingPlace">Save carmeet</string>
     <string name="error_participant_counts">Invalid participants count</string>
+    <string name="confirm_delete_meeting">Delete this meeting?</string>
+
 
     <!-- Meeting details/labels -->
     <string name="meeting_detail_title">Car meeting details</string>
@@ -31,13 +33,13 @@
     <string name="label_description">Description</string>
     <string name="label_meetingTime">Meeting time</string>
 
-    <!-- User list screen -->
+    <!-- User list view -->
     <string name="button_addUser">Add User</string>
     <string name="add_user">Add User</string>
     <string name="list_meetings">List meetings</string>
     <string name="no_users_added_yet">No users added yet</string>
 
-    <!-- User form screen -->
+    <!-- User form view -->
     <string name="userName">User Name</string>
     <string name="userEmail">E-mail</string>
     <string name="userBio">Bio</string>
@@ -49,8 +51,10 @@
     <string name="menu_deleteUser">Delete</string>
     <string name="menu_saveUser">Save</string>
     <string name="enter_valid_email">Please enter a valid email address</string>
+    <string name="enter_display_name">Please enter a display name</string>
+    <string name="confirm_delete_user">Delete this user?</string>
 
-    <!-- Car-related strings (kept for future screens) -->
+    <!-- Car-related strings (kept for future views) -->
     <string name="button_addCar">Add Car</string>
     <string name="hint_carMake">Car Make</string>
     <string name="hint_carColor">Car Color</string>
@@ -84,4 +88,6 @@
         <item>Field</item>
         <item>Other</item>
     </string-array>
+
+    <string name="action_delete">Delete</string>
 </resources>

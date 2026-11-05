@@ -13,4 +13,10 @@
         android:id="@+id/item_cancel_user"
         android:title="@string/menu_cancelUser"
         app:showAsAction="always" />
+
+    <item
+    android:id="@+id/item_delete_user"
+    android:title="@string/action_delete"
+    app:showAsAction="never" />
+    
 </menu>

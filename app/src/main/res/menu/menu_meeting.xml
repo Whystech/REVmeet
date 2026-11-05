@@ -10,4 +10,9 @@
         android:id="@+id/item_cancel_meeting"
         android:title="@string/menu_cancelMeetingPlace"
         app:showAsAction="always" />
+
+        <item
+        android:id="@+id/item_delete_meeting"
+        android:title="@string/action_delete"
+        app:showAsAction="never" />
 </menu>

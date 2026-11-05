@@ -42,6 +42,9 @@
             android:name=".views.user.UserView"
             android:exported="false" />
 
+        <activity
+            android:name=".views.userdetails.UserDetailView"
+            android:exported="false" />
     </application>
 
 </manifest>

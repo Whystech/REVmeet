@@ -80,7 +80,14 @@
             android:id="@+id/startsAt"
             android:layout_width="111dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp" />
+            android:layout_marginTop="5dp" />
+
+        <Button
+            android:id="@+id/editMeetingButton"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:text="Edit"/>
 
     </LinearLayout>
 

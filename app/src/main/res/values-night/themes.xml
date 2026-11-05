@@ -1,8 +1,8 @@
 <resources>
     <style name="Base.Theme.REVmeet" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">#D0B5FF</item>
-        <item name="colorOnPrimary">#30104E</item>
-        <item name="colorPrimaryContainer">#48266D</item>
+        <item name="colorPrimary">#13022F</item>
+        <item name="colorOnPrimary">#8A56BA</item>
+        <item name="colorPrimaryContainer">#7115D3</item>
         <item name="colorOnPrimaryContainer">#EFDBFF</item>
 
         <item name="colorSecondary">#AFC9FF</item>
@@ -10,7 +10,7 @@
         <item name="colorSecondaryContainer">#29456D</item>
         <item name="colorOnSecondaryContainer">#D8E5FF</item>
 
-        <item name="colorTertiary">#FFB1D7</item>
+        <item name="colorTertiary">#3A021E</item>
         <item name="colorOnTertiary">#531D3B</item>
         <item name="colorTertiaryContainer">#713454</item>
         <item name="colorOnTertiaryContainer">#FFD8E9</item>
@@ -18,7 +18,7 @@
         <item name="colorSurface">#000000</item>
         <item name="colorOnSurface">#F0ECF5</item>
         <item name="colorSurfaceVariant">#082E29</item>
-        <item name="colorOnSurfaceVariant">#D2C7DB</item>
+        <item name="colorOnSurfaceVariant">#1F0238</item>
         <item name="colorOutline">#00DDE9</item>
 
         <item name="android:statusBarColor">#100D16</item>

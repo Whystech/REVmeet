@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar
 import org.ianus.revmeet.R
 import org.ianus.revmeet.databinding.ActivityUserBinding
 import org.ianus.revmeet.helper.ValidateEmail
+import org.ianus.revmeet.models.UserModel
 
 class UserView : AppCompatActivity() {
 
@@ -23,11 +24,15 @@ class UserView : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbarUser)
         presenter = UserPresenter(this)
+
+        binding.toolbarUser.title =
+            if (presenter.isEditing) "Edit User" else getString(R.string.button_addUser)
     }
 
     // ADDED: Show the form's Save and Cancel actions in the toolbar.
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_user, menu)
+        menu.findItem(R.id.item_delete_user).isVisible = presenter.isEditing
         return true
     }
 
@@ -40,6 +45,10 @@ class UserView : AppCompatActivity() {
             }
             R.id.item_cancel_user -> {
                 finish()
+                true
+            }
+            R.id.item_delete_user -> {
+                presenter.doDeleteUser()
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -64,7 +73,7 @@ class UserView : AppCompatActivity() {
         if (displayName.isBlank()) {
             Snackbar.make(
                 binding.root,
-                R.string.enter_user_name,
+                R.string.enter_display_name,
                 Snackbar.LENGTH_LONG
             ).show()
             return
@@ -83,4 +92,13 @@ class UserView : AppCompatActivity() {
 
         presenter.doAddUser(username, email, displayName, bio)
     }
+
+    fun showUser(user: UserModel) {
+    binding.userName.setText(user.username)
+    binding.userEmail.setText(user.email)
+    binding.userDisplayName.setText(user.displayName)
+    binding.userBio.setText(user.bio)
+}
+
+
 }

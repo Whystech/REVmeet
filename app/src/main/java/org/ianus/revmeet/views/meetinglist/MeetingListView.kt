@@ -8,6 +8,7 @@ import org.ianus.revmeet.databinding.ActivityMeetingListBinding
 import android.content.Intent
 import android.view.Menu
 import android.view.MenuItem
+import androidx.recyclerview.widget.RecyclerView
 import org.ianus.revmeet.R
 import org.ianus.revmeet.views.meeting.MeetingView
 import org.ianus.revmeet.models.MeetingModel
@@ -23,9 +24,7 @@ class MeetingListView : AppCompatActivity(), MeetingListener {
 
         binding = ActivityMeetingListBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.toolbar)
-
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         presenter = MeetingListPresenter(this)
     }
@@ -65,4 +64,9 @@ class MeetingListView : AppCompatActivity(), MeetingListener {
     override fun onMeetingClick(meeting: MeetingModel) {
         presenter.doShowMeeting(meeting)
     }
+
+    override fun onEditMeetingClick(meeting: MeetingModel) {
+        presenter.doEditMeeting(meeting)
+    }
+
 }

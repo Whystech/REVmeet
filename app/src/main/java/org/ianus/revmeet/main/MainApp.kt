@@ -58,18 +58,21 @@ class MainApp : Application() {
         users = UserMemStore().apply {
             create(
                 UserModel(
+                    displayName = "Racer One",
                     username = "Racerone",
                     email = "racer@one.com"
                 )
             )
             create(
                 UserModel(
+                    displayName = "Racer Two",
                     username = "Racertwo",
                     email = "racer@two.com"
                 )
             )
             create(
                 UserModel(
+                    displayName = "Racer Three",
                     username = "Racerthree",
                     email = "racer@three.com"
                 )

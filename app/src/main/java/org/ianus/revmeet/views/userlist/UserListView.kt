@@ -11,10 +11,10 @@ import android.view.MenuItem
 import org.ianus.revmeet.R
 import org.ianus.revmeet.views.user.UserView
 import org.ianus.revmeet.models.UserModel
-import org.ianus.revmeet.views.meetinglist.MeetingListView
-import org.ianus.revmeet.views.userList.UserAdapter
+import org.ianus.revmeet.views.userlist.UserAdapter
+import org.ianus.revmeet.views.userlist.UserListener
 
-class UserListView : AppCompatActivity() {
+class UserListView : AppCompatActivity(), UserListener {
 
     private lateinit var binding: ActivityUserListBinding
     private lateinit var presenter: UserListPresenter
@@ -24,9 +24,7 @@ class UserListView : AppCompatActivity() {
 
         binding = ActivityUserListBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.toolbar)
-
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         presenter = UserListPresenter(this)
     }
@@ -35,7 +33,7 @@ class UserListView : AppCompatActivity() {
         super.onResume()
 
         val users = presenter.getUsers()
-        binding.recyclerView.adapter = UserAdapter(users)
+        binding.recyclerView.adapter = UserAdapter(users, this)
 
         val hasUsers = users.isNotEmpty()
         binding.recyclerView.isVisible = hasUsers
@@ -47,17 +45,25 @@ class UserListView : AppCompatActivity() {
         return true
     }
 
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.item_add_user -> {
                 startActivity(Intent(this, UserView::class.java))
                 true
             }
-            R.id.item_list_meeting -> {
-                startActivity(Intent(this, MeetingListView::class.java))
+            R.id.item_list_user -> {
+                startActivity(Intent(this, UserListView::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
+    override fun onUserClick(user: UserModel) {
+        presenter.doShowUser(user)
+    }
+
+    override fun onEditUserClick(user: UserModel) {
+    presenter.doEditUser(user)
+}
 }

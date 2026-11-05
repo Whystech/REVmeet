@@ -4,6 +4,7 @@ import android.content.Intent
 import org.ianus.revmeet.main.MainApp
 import org.ianus.revmeet.models.MeetingModel
 import org.ianus.revmeet.views.meeting.MeetingDetailView
+import org.ianus.revmeet.views.meeting.MeetingView
 import kotlin.jvm.java
 
 class MeetingListPresenter(private val view: MeetingListView) {
@@ -17,6 +18,12 @@ class MeetingListPresenter(private val view: MeetingListView) {
     fun doShowMeeting(meeting: MeetingModel) {
         val intent = Intent(view, MeetingDetailView::class.java)
         intent.putExtra("meeting", meeting)
+        view.startActivity(intent)
+    }
+
+    fun doEditMeeting(meeting: MeetingModel) {
+        val intent = Intent(view, MeetingView::class.java)
+        intent.putExtra("meeting_edit", meeting)
         view.startActivity(intent)
     }
 }

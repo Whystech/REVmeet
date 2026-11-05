@@ -26,14 +26,21 @@
             android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="37dp"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"/>
 
         <TextView
             android:id="@+id/userEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp" />
+            android:layout_marginTop="5dp" />
+
+        <Button
+            android:id="@+id/editUserButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:layout_marginTop="5dp"/>
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

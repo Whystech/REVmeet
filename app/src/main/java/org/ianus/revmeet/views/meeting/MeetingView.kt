@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import org.ianus.revmeet.R
 import org.ianus.revmeet.databinding.ActivityMeetingBinding
+import org.ianus.revmeet.models.MeetingModel
 import java.util.Calendar
 
 
@@ -22,25 +23,29 @@ class MeetingView : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbarAdd)
-        presenter = MeetingPresenter(this)
+
 
         /// Set values for participants to be used in Number Picker for number of participants and max number of participants
         binding.numberOfParticipants.minValue = 1
         binding.numberOfParticipants.maxValue = 100
         binding.numberOfParticipants.value = 1
         binding.numberOfParticipants.wrapSelectorWheel = false
-        ///Max Participants bindings
+
         binding.maxNumberOfParticipants.minValue = 1
         binding.maxNumberOfParticipants.maxValue = 100
         binding.maxNumberOfParticipants.value = 8
         binding.maxNumberOfParticipants.wrapSelectorWheel = false
+
         binding.meetingTime.setIs24HourView(true)
+
+        presenter = MeetingPresenter(this)
     }
 
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_meeting, menu)
+        menu.findItem(R.id.item_delete_meeting).isVisible = presenter.isEditing
         return true
     }
 
@@ -54,6 +59,11 @@ class MeetingView : AppCompatActivity() {
                 finish()
                 true
             }
+
+            R.id.item_delete_meeting -> {
+                presenter.doDeleteMeeting()
+                true
+}
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -100,7 +110,7 @@ class MeetingView : AppCompatActivity() {
         val startsAt = startsAtCalendar.timeInMillis
 
 
-        presenter.doAddMeeting(
+        presenter.doSaveMeeting(
             title = title,
             description = description,
             locationType = locationType,
@@ -108,5 +118,39 @@ class MeetingView : AppCompatActivity() {
             maximum = maximum,
             startsAt = startsAt
         )
+/// Change toolbar name after starting the presenter
+        binding.toolbarAdd.setTitle(
+            if (presenter.isEditing) R.string.edit_meeting_title
+            else R.string.button_addMeetingPlace
+        )
+    }
+
+    fun showMeeting(meeting: MeetingModel) {
+        binding.toolbarAdd.title = getString(R.string.edit_meeting_title)
+        binding.meetingTitle.setText(meeting.title)
+        binding.meetingDescription.setText(meeting.description)
+
+        val locationIndex = (0 until binding.typeOfLocation.count)
+            .firstOrNull {
+                binding.typeOfLocation.getItemAtPosition(it).toString() ==
+                        meeting.typeOfLocation
+            }
+        if (locationIndex != null) {
+            binding.typeOfLocation.setSelection(locationIndex)
+        }
+
+        binding.numberOfParticipants.value = meeting.numberOfParticipants
+        binding.maxNumberOfParticipants.value = meeting.maxNumberOfParticipants
+
+        val calendar = Calendar.getInstance().apply {
+            timeInMillis = meeting.startsAt
+        }
+        binding.meetingDate.updateDate(
+            calendar.get(Calendar.YEAR),
+            calendar.get(Calendar.MONTH),
+            calendar.get(Calendar.DAY_OF_MONTH)
+        )
+        binding.meetingTime.hour = calendar.get(Calendar.HOUR_OF_DAY)
+        binding.meetingTime.minute = calendar.get(Calendar.MINUTE)
     }
 }

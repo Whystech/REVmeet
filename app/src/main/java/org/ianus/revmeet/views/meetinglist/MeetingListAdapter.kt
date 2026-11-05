@@ -10,6 +10,7 @@ import org.ianus.revmeet.helper.CalendarConverter
 interface MeetingListener {
    ///Opening the meeting view
     fun onMeetingClick(meeting: MeetingModel)
+    fun onEditMeetingClick(meeting: MeetingModel)
 }
 
 class MeetingAdapter(
@@ -43,10 +44,14 @@ class MeetingAdapter(
             binding.participantCount.text =
                 "${meeting.numberOfParticipants} / ${meeting.maxNumberOfParticipants} participants"
             binding.startsAt.text = CalendarConverter.getDate(meeting.startsAt, "dd/MM/yyyy hh:mm")
-
-
             binding.root.setOnClickListener {
                 listener.onMeetingClick(meeting)
+
+            }
+
+            ///bind the edit button to function
+            binding.editMeetingButton.setOnClickListener {
+                listener.onEditMeetingClick(meeting)
             }
         }
     }
