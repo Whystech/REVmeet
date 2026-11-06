@@ -35,4 +35,9 @@
         <item name="fontFamily">@font/actuate_font</item>
         <item name="android:fontFamily">@font/actuate_font</item>
     </style>
+    <style name="Theme.REVmeet.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#45206B</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.REVmeet</item>
+    </style>
 </resources>

@@ -13,6 +13,7 @@ import org.ianus.revmeet.R
 import org.ianus.revmeet.views.meeting.MeetingView
 import org.ianus.revmeet.models.MeetingModel
 import org.ianus.revmeet.views.userlist.UserListView
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
 class MeetingListView : AppCompatActivity(), MeetingListener {
 
@@ -20,8 +21,9 @@ class MeetingListView : AppCompatActivity(), MeetingListener {
     private lateinit var presenter: MeetingListPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        /// Launch spashscreen
+        installSplashScreen()
         super.onCreate(savedInstanceState)
-
         binding = ActivityMeetingListBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)

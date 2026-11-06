@@ -50,5 +50,6 @@ dependencies {
     implementation(libs.picasso)
     implementation(libs.play.services.maps)
     implementation(libs.gson)
+    implementation(libs.androidx.core.splashscreen)
 
 }
