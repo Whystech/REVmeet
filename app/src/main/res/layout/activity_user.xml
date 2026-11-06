@@ -8,6 +8,7 @@
     <!-- Toolbar for the user form. -->
     <!-- margin for safe zone -->
     <com.google.android.material.appbar.MaterialToolbar
+        app:titleTextAppearance="@style/TextAppearance.REVmeet.ToolbarTitle"
         android:id="@+id/toolbarUser"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"

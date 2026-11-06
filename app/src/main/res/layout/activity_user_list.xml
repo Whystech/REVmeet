@@ -7,6 +7,7 @@
 
     <!-- Edited margins so it does not interfere with status bar and navigation bar at the bottom -->
     <com.google.android.material.appbar.MaterialToolbar
+        app:titleTextAppearance="@style/TextAppearance.REVmeet.ToolbarTitle"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="66dp"

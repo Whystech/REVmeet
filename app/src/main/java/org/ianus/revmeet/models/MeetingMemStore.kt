@@ -32,14 +32,16 @@ class MeetingMemStore : MeetingStore {
     override fun update(meeting: MeetingModel) {
         val foundMeeting: MeetingModel? = meetings.find { p -> p.id == meeting.id }
         if (foundMeeting != null) {
+            val participantIds = meeting.participantUserIds.toList()
+            foundMeeting.participantUserIds.clear()
+            foundMeeting.participantUserIds.addAll(participantIds)
             foundMeeting.title = meeting.title
             foundMeeting.description = meeting.description
             foundMeeting.lat = meeting.lat
             foundMeeting.lng = meeting.lng
             foundMeeting.maxNumberOfParticipants = meeting.maxNumberOfParticipants
             foundMeeting.typeOfLocation = meeting.typeOfLocation
-            foundMeeting.numberOfParticipants = meeting.numberOfParticipants
-            foundMeeting.numberOfParticipants = meeting.numberOfParticipants
+            foundMeeting.organizerUserId = meeting.organizerUserId
             foundMeeting.startsAt = meeting.startsAt
             logAll()
         }

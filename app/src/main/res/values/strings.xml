@@ -89,5 +89,15 @@
         <item>Other</item>
     </string-array>
 
+    <!-- Participants strings -->
     <string name="action_delete">Delete</string>
+    <string name="add_participants">Add Participants</string>
+    <string name="meeting_at_capacity">Max Capactity Reached\n</string>
+    <string name="could_not_add_participant">Participant could not be added</string>
+    <string name="no_users_to_add">No users</string>
+    <string name="remove_participants">Remove Participants</string>
+    <string name="no_participants_to_remove">Nothing to remove.</string>
+    <string name="could_not_remove_participant">Participant could not be removed</string>
+    <string name="list_participants">List Participants</string>
+    <string name="no_participants">No participants added yet</string>
 </resources>

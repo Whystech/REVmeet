@@ -21,7 +21,6 @@ class MeetingPresenter(private val view: MeetingView) {
         title: String,
         description: String,
         locationType: String,
-        participants: Int,
         maximum: Int,
         startsAt: Long
     ) {
@@ -33,7 +32,6 @@ class MeetingPresenter(private val view: MeetingView) {
                     title = title,
                     description = description,
                     typeOfLocation = locationType,
-                    numberOfParticipants = participants,
                     maxNumberOfParticipants = maximum,
                     startsAt = startsAt
                 )
@@ -42,7 +40,6 @@ class MeetingPresenter(private val view: MeetingView) {
             existingMeeting.title = title
             existingMeeting.description = description
             existingMeeting.typeOfLocation = locationType
-            existingMeeting.numberOfParticipants = participants
             existingMeeting.maxNumberOfParticipants = maximum
             existingMeeting.startsAt = startsAt
             app.meetings.update(existingMeeting)

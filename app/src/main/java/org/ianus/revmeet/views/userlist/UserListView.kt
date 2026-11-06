@@ -11,6 +11,8 @@ import android.view.MenuItem
 import org.ianus.revmeet.R
 import org.ianus.revmeet.views.user.UserView
 import org.ianus.revmeet.models.UserModel
+import org.ianus.revmeet.views.meeting.MeetingView
+import org.ianus.revmeet.views.meetinglist.MeetingListView
 import org.ianus.revmeet.views.userlist.UserAdapter
 import org.ianus.revmeet.views.userlist.UserListener
 
@@ -52,8 +54,8 @@ class UserListView : AppCompatActivity(), UserListener {
                 startActivity(Intent(this, UserView::class.java))
                 true
             }
-            R.id.item_list_user -> {
-                startActivity(Intent(this, UserListView::class.java))
+            R.id.item_list_meeting -> {
+                startActivity(Intent(this, MeetingListView::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)

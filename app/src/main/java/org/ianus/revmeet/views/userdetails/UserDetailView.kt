@@ -40,7 +40,7 @@ class UserDetailView : AppCompatActivity() {
         binding.email.text = user.email
         binding.displayName.text = user.displayName
         binding.bio.text = user.bio
-        binding.toolbarDetail.title = "${user.username} Details"
+        binding.toolbarDetail.title = "${user.username} details"
 
     }
 

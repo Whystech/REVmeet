@@ -45,6 +45,18 @@
         <activity
             android:name=".views.userdetails.UserDetailView"
             android:exported="false" />
+
+        <activity
+            android:name=".views.participants.AddParticipantsView"
+            android:exported="false" />
+
+        <activity
+            android:name=".views.participants.RemoveParticipantsView"
+            android:exported="false" />
+
+        <activity
+            android:name=".views.participants.ListParticipantsView"
+            android:exported="false" />
     </application>
 
 </manifest>

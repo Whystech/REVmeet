@@ -21,16 +21,10 @@ class MeetingView : AppCompatActivity() {
 
         binding = ActivityMeetingBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.toolbarAdd)
 
 
-        /// Set values for participants to be used in Number Picker for number of participants and max number of participants
-        binding.numberOfParticipants.minValue = 1
-        binding.numberOfParticipants.maxValue = 100
-        binding.numberOfParticipants.value = 1
-        binding.numberOfParticipants.wrapSelectorWheel = false
-
+        /// Set values for participants to be used in Number Picker for max number of participants
         binding.maxNumberOfParticipants.minValue = 1
         binding.maxNumberOfParticipants.maxValue = 100
         binding.maxNumberOfParticipants.value = 8
@@ -72,8 +66,6 @@ class MeetingView : AppCompatActivity() {
         val title = binding.meetingTitle.text.toString().trim()
         val description = binding.meetingDescription.text.toString().trim()
         val locationType = binding.typeOfLocation.selectedItem.toString()
-        val participants =
-            binding.numberOfParticipants.value
         val maximum =
             binding.maxNumberOfParticipants.value
 
@@ -81,15 +73,6 @@ class MeetingView : AppCompatActivity() {
             Snackbar.make(
                 binding.root,
                 R.string.enter_meetingPlace_title,
-                Snackbar.LENGTH_LONG
-            ).show()
-            return
-        }
-        /// check if participants is higher than max participants
-        if (participants > maximum) {
-            Snackbar.make(
-                binding.root,
-                R.string.error_participant_counts,
                 Snackbar.LENGTH_LONG
             ).show()
             return
@@ -114,7 +97,6 @@ class MeetingView : AppCompatActivity() {
             title = title,
             description = description,
             locationType = locationType,
-            participants = participants,
             maximum = maximum,
             startsAt = startsAt
         )
@@ -139,7 +121,6 @@ class MeetingView : AppCompatActivity() {
             binding.typeOfLocation.setSelection(locationIndex)
         }
 
-        binding.numberOfParticipants.value = meeting.numberOfParticipants
         binding.maxNumberOfParticipants.value = meeting.maxNumberOfParticipants
 
         val calendar = Calendar.getInstance().apply {
