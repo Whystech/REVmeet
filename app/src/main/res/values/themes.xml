@@ -3,13 +3,13 @@
         <!-- Cyan accent -->
         <item name="colorPrimary">#006B72</item>
         <item name="colorOnPrimary">#FFFFFF</item>
-        <item name="colorPrimaryContainer">#B7F1F1</item>
+        <item name="colorPrimaryContainer">#F2F6F6</item>
         <item name="colorOnPrimaryContainer">#002021</item>
 
         <!-- Lime accent -->
         <item name="colorSecondary">#527500</item>
         <item name="colorOnSecondary">#FFFFFF</item>
-        <item name="colorSecondaryContainer">#D8F5A2</item>
+        <item name="colorSecondaryContainer">#DFF2BA</item>
         <item name="colorOnSecondaryContainer">#172600</item>
 
         <!-- Warm highlight -->
@@ -19,7 +19,7 @@
         <item name="colorOnTertiaryContainer">#321100</item>
 
         <!-- Light surfaces -->
-        <item name="colorSurface">#F5F7F7</item>
+        <item name="colorSurface">#FFFBFB</item>
         <item name="colorOnSurface">#131B1C</item>
         <item name="colorSurfaceVariant">#DDE5E5</item>
         <item name="colorOnSurfaceVariant">#404849</item>
@@ -41,7 +41,7 @@
     </style>
 
     <style name="Theme.REVmeet.Splash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#45206B</item>
+        <item name="windowSplashScreenBackground">#02766B</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
         <item name="postSplashScreenTheme">@style/Theme.REVmeet</item>
     </style>
