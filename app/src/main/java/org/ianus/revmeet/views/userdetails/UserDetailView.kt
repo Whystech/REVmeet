@@ -34,7 +34,7 @@ class UserDetailView : AppCompatActivity() {
         user = selectedUser
         showUser()
     }
-    // Display the selected user's values in the detail layout.
+    // Display the selected user's values in the user detail layout.
     private fun showUser() {
         binding.username.text = user.username
         binding.email.text = user.email

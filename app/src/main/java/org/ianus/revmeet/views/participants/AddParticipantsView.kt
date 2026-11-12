@@ -71,6 +71,7 @@ class AddParticipantsView : AppCompatActivity() {
 
         binding.emptyState.isVisible = users.isEmpty()
         if (users.isEmpty()) {
+            //Populate text in the emptyState element if there are no users or if the meeting is already at max.
             binding.emptyState.setText(
                 if (presenter.isAtCapacity()) {
                     R.string.meeting_at_capacity

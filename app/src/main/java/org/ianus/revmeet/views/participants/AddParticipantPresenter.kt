@@ -10,6 +10,7 @@ class AddParticipantsPresenter(
     fun meetingExists(): Boolean =
         app.meetings.findById(meetingId) != null
 
+    //determine if the meeting is already at full capacity
     fun isAtCapacity(): Boolean {
         val meeting = app.meetings.findById(meetingId) ?: return false
         return meeting.numberOfParticipants >= meeting.maxNumberOfParticipants

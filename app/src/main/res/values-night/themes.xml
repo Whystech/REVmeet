@@ -2,29 +2,33 @@
 
 
     <style name="Base.Theme.REVmeet" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">#13022F</item>
-        <item name="colorOnPrimary">#8A56BA</item>
-        <item name="colorPrimaryContainer">#7115D3</item>
-        <item name="colorOnPrimaryContainer">#EFDBFF</item>
+        <!-- Cyan accent -->
+        <item name="colorPrimary">#55DDE0</item>
+        <item name="colorOnPrimary">#003739</item>
+        <item name="colorPrimaryContainer">#00575A</item>
+        <item name="colorOnPrimaryContainer">#C4F4F4</item>
 
-        <item name="colorSecondary">#AFC9FF</item>
-        <item name="colorOnSecondary">#152E52</item>
-        <item name="colorSecondaryContainer">#29456D</item>
-        <item name="colorOnSecondaryContainer">#D8E5FF</item>
+        <!-- Lime accent -->
+        <item name="colorSecondary">#C1F36B</item>
+        <item name="colorOnSecondary">#293900</item>
+        <item name="colorSecondaryContainer">#3D5500</item>
+        <item name="colorOnSecondaryContainer">#DEF99D</item>
 
-        <item name="colorTertiary">#3A021E</item>
-        <item name="colorOnTertiary">#531D3B</item>
-        <item name="colorTertiaryContainer">#713454</item>
-        <item name="colorOnTertiaryContainer">#FFD8E9</item>
+        <!-- Warm highlight -->
+        <item name="colorTertiary">#FFB68D</item>
+        <item name="colorOnTertiary">#4D1D00</item>
+        <item name="colorTertiaryContainer">#6B2B00</item>
+        <item name="colorOnTertiaryContainer">#FFDBCC</item>
 
+        <!-- Dark surfaces -->
         <item name="colorSurface">#000000</item>
-        <item name="colorOnSurface">#F0ECF5</item>
-        <item name="colorSurfaceVariant">#082E29</item>
-        <item name="colorOnSurfaceVariant">#1F0238</item>
-        <item name="colorOutline">#00DDE9</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+        <item name="colorSurfaceVariant">#3E4949</item>
+        <item name="colorOnSurfaceVariant">#C0CCCC</item>
+        <item name="colorOutline">#899595</item>
 
-        <item name="android:statusBarColor">#100D16</item>
-        <item name="android:navigationBarColor">#021A1D</item>
+        <item name="android:statusBarColor">#111819</item>
+        <item name="android:navigationBarColor">#111819</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowLightNavigationBar">false</item>
         <item name="android:fontFamily">@font/helvetica_font</item>
@@ -36,7 +40,7 @@
         <item name="android:fontFamily">@font/actuate_font</item>
     </style>
     <style name="Theme.REVmeet.Splash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#45206B</item>
+        <item name="windowSplashScreenBackground">#205E6B</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
         <item name="postSplashScreenTheme">@style/Theme.REVmeet</item>
     </style>

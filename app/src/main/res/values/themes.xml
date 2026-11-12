@@ -1,33 +1,48 @@
 <resources>
     <style name="Base.Theme.REVmeet" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">#45206B</item>
-        <item name="colorOnPrimary">#494949</item>
-        <item name="colorPrimaryContainer">#7F748A</item>
-        <item name="colorOnPrimaryContainer">#241039</item>
+        <!-- Cyan accent -->
+        <item name="colorPrimary">#006B72</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">#B7F1F1</item>
+        <item name="colorOnPrimaryContainer">#002021</item>
 
-        <item name="colorSecondary">#264A78</item>
-        <item name="colorOnSecondary">#DC52E2</item>
-        <item name="colorSecondaryContainer">#123F8A</item>
-        <item name="colorOnSecondaryContainer">#101F35</item>
+        <!-- Lime accent -->
+        <item name="colorSecondary">#527500</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSecondaryContainer">#D8F5A2</item>
+        <item name="colorOnSecondaryContainer">#172600</item>
 
-        <item name="colorTertiary">#836E7A</item>
-        <item name="colorOnTertiary">#DB2D2D</item>
-        <item name="colorTertiaryContainer">#6D525F</item>
-        <item name="colorOnTertiaryContainer">#3B0A27</item>
+        <!-- Warm highlight -->
+        <item name="colorTertiary">#8C3D00</item>
+        <item name="colorOnTertiary">#FFFFFF</item>
+        <item name="colorTertiaryContainer">#FFDBCC</item>
+        <item name="colorOnTertiaryContainer">#321100</item>
 
-        <item name="colorSurface">#FBEEFB</item>
-        <item name="colorOnSurface">#1D1A22</item>
-        <item name="colorSurfaceVariant">#2C2A2F</item>
-        <item name="colorOnSurfaceVariant">#494451</item>
-        <item name="colorOutline">#79717F</item>
+        <!-- Light surfaces -->
+        <item name="colorSurface">#F5F7F7</item>
+        <item name="colorOnSurface">#131B1C</item>
+        <item name="colorSurfaceVariant">#DDE5E5</item>
+        <item name="colorOnSurfaceVariant">#404849</item>
+        <item name="colorOutline">#697778</item>
 
-        <item name="android:statusBarColor">#301747</item>
-        <item name="android:navigationBarColor">#FFFBFF</item>
-        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#F5F7F7</item>
+        <item name="android:navigationBarColor">#F5F7F7</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowLightNavigationBar">true</item>
         <item name="android:fontFamily">@font/helvetica_font</item>
-
     </style>
 
     <style name="Theme.REVmeet" parent="Base.Theme.REVmeet" />
+
+    <style name="TextAppearance.REVmeet.ToolbarTitle"
+        parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/actuate_font</item>
+        <item name="android:fontFamily">@font/actuate_font</item>
+    </style>
+
+    <style name="Theme.REVmeet.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#45206B</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.REVmeet</item>
+    </style>
 </resources>

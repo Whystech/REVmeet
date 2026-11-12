@@ -35,9 +35,6 @@ class ListParticipantAdapter(
             binding.email.text = user.email
             binding.username.text = user.username
             binding.bio.text = user.bio
-            binding.root.setOnClickListener {
-                onUserClick(user)
             }
         }
     }
-}

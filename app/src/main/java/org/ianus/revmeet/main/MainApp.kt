@@ -1,11 +1,14 @@
 package org.ianus.revmeet.main
 
 import android.app.Application
+import org.ianus.revmeet.models.CarJSONStore
 import org.ianus.revmeet.models.CarMemStore
 import org.ianus.revmeet.models.CarStore
+import org.ianus.revmeet.models.MeetingJSONStore
 import org.ianus.revmeet.models.MeetingStore
 import org.ianus.revmeet.models.MeetingMemStore
 import org.ianus.revmeet.models.MeetingModel
+import org.ianus.revmeet.models.UserJSONStore
 import org.ianus.revmeet.models.UserMemStore
 import org.ianus.revmeet.models.UserModel
 import org.ianus.revmeet.models.UserStore
@@ -21,15 +24,18 @@ class MainApp : Application() {
     override fun onCreate() {
         super.onCreate()
         Timber.plant(Timber.DebugTree())
-        meetings = MeetingMemStore()
-        users = UserMemStore()
-        cars = CarMemStore()
+        meetings = MeetingJSONStore(this)
+        users = UserJSONStore(this)
+        cars = CarJSONStore(this)
         i("REVmeet started")
-
+        // convert 24hrs into milliseconds
         val oneDayMillis = 24 * 60 * 60 * 1000L
+        // get current day in milliseconds so I can manipulate future dates for the meetings
         val firstMeetingTime = System.currentTimeMillis()
 
-        meetings = MeetingMemStore().apply {
+        //Populate meetings and users.
+        //If empty, auto-generate some examples.
+        meetings = MeetingJSONStore(this).apply {
             create(MeetingModel(
                 title = "Coastal Sunrise Run",
                 description = "A relaxed morning drive along the coast.",
@@ -102,7 +108,7 @@ class MainApp : Application() {
             ))
         }
 
-        users = UserMemStore().apply {
+        users = UserJSONStore(this).apply {
             create(UserModel(
                 username = "alexdriver",
                 email = "alex@example.com",
