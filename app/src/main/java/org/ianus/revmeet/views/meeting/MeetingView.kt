@@ -23,15 +23,12 @@ class MeetingView : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbarAdd)
 
-
         /// Set values for participants to be used in Number Picker for max number of participants
         binding.maxNumberOfParticipants.minValue = 1
         binding.maxNumberOfParticipants.maxValue = 100
         binding.maxNumberOfParticipants.value = 8
-        binding.maxNumberOfParticipants.wrapSelectorWheel = true
-
+        binding.maxNumberOfParticipants.wrapSelectorWheel = false
         binding.meetingTime.setIs24HourView(true)
-
         presenter = MeetingPresenter(this)
     }
 
@@ -66,8 +63,7 @@ class MeetingView : AppCompatActivity() {
         val title = binding.meetingTitle.text.toString().trim()
         val description = binding.meetingDescription.text.toString().trim()
         val locationType = binding.typeOfLocation.selectedItem.toString()
-        val maximum =
-            binding.maxNumberOfParticipants.value
+        val maximum = binding.maxNumberOfParticipants.value
 
         if (title.isBlank()) {
             Snackbar.make(

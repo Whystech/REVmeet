@@ -35,6 +35,7 @@ class MainApp : Application() {
 
         //Populate meetings and users.
         //If empty, auto-generate some examples.
+        if (meetings.findAll().isEmpty()){
         meetings = MeetingJSONStore(this).apply {
             create(MeetingModel(
                 title = "Coastal Sunrise Run",
@@ -106,8 +107,8 @@ class MainApp : Application() {
                 maxNumberOfParticipants = 6,
                 startsAt = firstMeetingTime + 10 * oneDayMillis
             ))
-        }
-
+        }}
+        if (users.findAll().isEmpty()){
         users = UserJSONStore(this).apply {
             create(UserModel(
                 username = "alexdriver",
@@ -170,5 +171,6 @@ class MainApp : Application() {
                 bio = "Interested in meeting local car enthusiasts."
             ))
         }
+    }
     }
 }
