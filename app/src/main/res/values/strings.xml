@@ -39,6 +39,7 @@
     <string name="list_meetings">List meetings</string>
     <string name="no_users_added_yet">No users added yet</string>
 
+
     <!-- User form view -->
     <string name="userName">User Name</string>
     <string name="userEmail">E-mail</string>
@@ -53,6 +54,8 @@
     <string name="enter_valid_email">Please enter a valid email address</string>
     <string name="enter_display_name">Please enter a display name</string>
     <string name="confirm_delete_user">Delete this user?</string>
+
+
 
     <!-- Car-related strings (kept for future views) -->
     <string name="button_addCar">Add Car</string>
@@ -100,4 +103,8 @@
     <string name="could_not_remove_participant">Participant could not be removed</string>
     <string name="list_participants">List Participants</string>
     <string name="no_participants">No participants added yet</string>
+    <string name="label_DisplayName">Display Name:</string>
+    <string name="label_username">Username:</string>
+    <string name="label_email">E-mail address:</string>
+    <string name="label_bio">Bio:</string>
 </resources>

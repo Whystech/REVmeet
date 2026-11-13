@@ -28,7 +28,7 @@ class MeetingView : AppCompatActivity() {
         binding.maxNumberOfParticipants.minValue = 1
         binding.maxNumberOfParticipants.maxValue = 100
         binding.maxNumberOfParticipants.value = 8
-        binding.maxNumberOfParticipants.wrapSelectorWheel = false
+        binding.maxNumberOfParticipants.wrapSelectorWheel = true
 
         binding.meetingTime.setIs24HourView(true)
 

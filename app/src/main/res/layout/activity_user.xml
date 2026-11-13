@@ -26,7 +26,15 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!--  User name input. -->
+            <!--  Username input. -->
+
+            <TextView
+                android:id="@+id/labelUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_username"
+                android:textStyle="bold" />
             <EditText
                 android:id="@+id/userName"
                 android:layout_width="match_parent"
@@ -34,6 +42,15 @@
                 android:hint="@string/userName"
                 android:inputType="textPersonName|textCapWords" />
             <!-- Display Name -->
+
+            <TextView
+                android:id="@+id/labelDisplayName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_DisplayName"
+                android:textStyle="bold" />
+
             <EditText
                 android:id="@+id/userDisplayName"
                 android:layout_width="match_parent"
@@ -43,6 +60,15 @@
                 android:inputType="text" />
 
             <!--  Email input. -->
+
+            <TextView
+                android:id="@+id/labelEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_email"
+                android:textStyle="bold" />
+
             <EditText
                 android:id="@+id/userEmail"
                 android:layout_width="match_parent"
@@ -52,6 +78,16 @@
                 android:inputType="textEmailAddress" />
 
             <!-- Bio -->
+
+            <TextView
+                android:id="@+id/labelBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_bio"
+                android:textStyle="bold" />
+
+
             <EditText
                 android:id="@+id/userBio"
                 android:layout_width="match_parent"

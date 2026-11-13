@@ -25,18 +25,33 @@
             android:padding="16dp">
 
             <TextView
+                android:id="@+id/labelUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_username"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/labelDisplayName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_DisplayName"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/displayName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="4dp"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -44,22 +59,24 @@
                 android:id="@+id/label_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:textStyle="bold"
-                android:text="E-mail address"/>
+                android:layout_marginTop="20dp"
+                android:text="E-mail address"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp" />
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
 
             <TextView
                 android:id="@+id/label_bio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="Bio"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_bio"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 

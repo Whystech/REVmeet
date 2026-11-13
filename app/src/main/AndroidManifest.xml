@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.REVmeet">
 
-        <!-- Set meeting list view as initial activity to be seen by the user at launch time-->
+<!-- Meeting list activity -->
         <activity
             android:name=".views.meetinglist.MeetingListView"
             android:exported="true"
@@ -29,7 +29,7 @@
             android:name=".views.meeting.MeetingView"
             android:exported="false" />
 
-        <!-- Meeting details activity-->
+<!-- Meeting details activity-->
         <activity
             android:name=".views.meeting.MeetingDetailView"
             android:exported="false" />
@@ -42,24 +42,24 @@
         <activity
             android:name=".views.user.UserView"
             android:exported="false" />
-
+<!-- User details activity -->
         <activity
             android:name=".views.userdetails.UserDetailView"
             android:exported="false" />
 
+<!-- Add participants activity -->
         <activity
             android:name=".views.participants.AddParticipantsView"
             android:exported="false" />
 
+<!-- Remove participants activity -->
         <activity
             android:name=".views.participants.RemoveParticipantsView"
             android:exported="false" />
 
+<!-- List participants w/details activity -->
         <activity
             android:name=".views.participants.ListParticipantsView"
             android:exported="false" />
-
-
     </application>
-
 </manifest>
